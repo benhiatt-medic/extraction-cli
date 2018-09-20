@@ -44,11 +44,11 @@ def parse_files(variables, files, dir_in, dir_out):
 @click.option('--dir-in',
               type=click.Path(exists=True, file_okay=False),
               default=getcwd(),
-              help='Defaults to the current working directory')
+              help='Defaults to the current working directory.')
 @click.option('--dir-out',
               type=click.Path(file_okay=False, writable=True),
               default=getcwd() + '/extracted',
-              help='Defaults to the directory "extracted" in the current working directory (creates if nonexistent)')
+              help='Defaults to the directory "extracted" in the current working directory (creates if nonexistent).')
 @click.argument('var-file',
                 type=click.Path(exists=True, dir_okay=False))
 def get_vars(dir_in, dir_out, var_file):
